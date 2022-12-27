@@ -113,7 +113,6 @@ char *xstrdup(const char *);
 
 /* config.h globals */
 extern char *utmp;
-extern char *scroll;
 extern char *stty_args;
 extern char *vtiden;
 extern wchar_t *worddelimiters;

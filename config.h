@@ -5,16 +5,15 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "monospace:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
- * 2: scroll and/or utmp
- * 3: SHELL environment variable
- * 4: value of shell in /etc/passwd
- * 5: value of shell in config.h
+ * 2: SHELL environment variable
+ * 3: value of shell in /etc/passwd
+ * 4: value of shell in config.h
  */
 static char *shell = "/bin/sh";
 char *utmp = NULL;
