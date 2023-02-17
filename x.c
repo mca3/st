@@ -2117,7 +2117,6 @@ xrdb_load(void)
 		XRESOURCE_LOAD_STRING("termname", termname);
 
 		XRESOURCE_LOAD_INTEGER("blinktimeout", blinktimeout);
-		XRESOURCE_LOAD_INTEGER("bellvolume", bellvolume);
 		XRESOURCE_LOAD_INTEGER("borderpx", borderpx);
 		XRESOURCE_LOAD_INTEGER("cursorshape", cursorshape);
 
