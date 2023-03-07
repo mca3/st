@@ -879,8 +879,8 @@ xhints(void)
 	sizeh->flags = PSize | PResizeInc | PBaseSize | PMinSize;
 	sizeh->height = win.h;
 	sizeh->width = win.w;
-	sizeh->height_inc = 1;
-	sizeh->width_inc = 1;
+	sizeh->height_inc = anysize ? 1 : win.ch;
+	sizeh->width_inc = anysize ? 1 : win.cw;
 	sizeh->base_height = 2 * borderpx;
 	sizeh->base_width = 2 * borderpx;
 	sizeh->min_height = win.ch + 2 * borderpx;
@@ -2174,6 +2174,9 @@ main(int argc, char *argv[])
 		break;
 	case 'c':
 		opt_class = EARGF(usage());
+		break;
+	case 'C':
+		anysize ^= 1;
 		break;
 	case 'e':
 		if (argc > 0)
